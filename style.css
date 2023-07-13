@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background: hsl(226, 43%, 10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  display: grid;
+  width: 90%;
+  max-height: 1200px;
+  margin: 20px 0px;
+  padding: 10px;
+  grid-template-columns: repeat(1fr, 4);
+  grid-auto-rows: minmax(10px, auto);
+  color: hsl(0, 0%, 100%);
+  gap: 20px;
+}
+.nav-card img {
+  width: 60px;
+  border: solid;
+  border-radius: 50%;
+}
+.nav-card {
+  grid-column: 1/5;
+  grid-row: 1/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 180px;
+}
+.nav-one {
+  display: flex;
+  width: 101%;
+  height: 130px;
+  align-items: center;
+  justify-content: space-around;
+  background: hsl(246, 80%, 60%);
+  border-radius: 10px;
+  margin-bottom: -5px;
+  z-index: 2;
+}
+.btn {
+  width: 101%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(235, 46%, 20%);
+  z-index: 1;
+  border-radius: 0px 0px 10px 10px;
+}
+.btn button {
+  margin: 0 25px;
+  border: none;
+  outline: none;
+  background: none;
+  color: hsl(235, 45%, 61%);
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn button:hover {
+  color: hsl(0, 0%, 100%);
+}
+.nav-one span {
+  color: hsl(236, 100%, 87%);
+}
+.track-card {
+  height: 140px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.track-card .track {
+  width: 100%;
+  height: 105px;
+  background: hsl(235, 46%, 20%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.track-card .track:hover {
+  background: rgb(55, 60, 128);
+}
+.track-card .track div:nth-child(1) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+.track-card .track div:nth-child(2) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.track-card .track div:nth-child(2) h2 {
+  font-weight: lighter;
+}
+.track-card .track div:nth-child(2) span {
+  color: hsl(236, 100%, 87%);
+  font-size: 13px;
+}
+.one {
+  background-image: linear-gradient(hsl(15, 100%, 70%), hsl(15, 100%, 70%)),
+    url(./images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  grid-column: 1/5;
+  grid-row: 5/10;
+  background-position: 90% -10%;
+}
+.two {
+  background-image: linear-gradient(hsl(195, 74%, 62%), hsl(195, 74%, 62%)),
+    url(./images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  grid-column: 1/5;
+  grid-row: 10/15;
+  background-position: 90% -10%;
+}
+.three {
+  background-image: linear-gradient(hsl(348, 100%, 68%), hsl(348, 100%, 68%)),
+    url(./images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  grid-column: 1/5;
+  grid-row: 15/20;
+  background-position: 90% -10%;
+}
+.four {
+  background-image: linear-gradient(hsl(145, 58%, 55%), hsl(145, 58%, 55%)),
+    url(./images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  grid-column: 1/5;
+  grid-row: 20/25;
+  background-position: 90% -10%;
+}
+.five {
+  background-image: linear-gradient(hsl(264, 64%, 52%), hsl(264, 64%, 52%)),
+    url(./images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  grid-column: 1/5;
+  grid-row: 25/30;
+  background-position: 90% -32%;
+}
+.six {
+  background-image: linear-gradient(hsl(43, 86%, 62%), hsl(43, 84%, 65%)),
+    url(./images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  grid-column: 1/5;
+  grid-row: 30/35;
+  background-position: 90% -15%;
+}
+.attribution {
+  text-align: center;
+  margin-bottom: 20px;
+  color: hsl(0, 0%, 100%);
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(264, 64%, 52%);
+}
+@media only screen and (min-width: 900px) {
+  .wrapper {
+    width: max-content;
+    max-height: 450px;
+    margin: 120px 0px;
+    padding: 10px;
+    grid-template-columns: repeat(1fr, 4);
+    grid-auto-columns: minmax(200px, 200px);
+    grid-auto-rows: minmax(50px, auto);
+    color: hsl(0, 0%, 100%);
+    display: grid;
+  }
+  .nav-card {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 86%;
+    width: 100%;
+  }
+  .nav-one {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 320px;
+    align-items: flex-start;
+    justify-content: center;
+    background: hsl(246, 80%, 60%);
+    padding: 0px 20px;
+  }
+  .btn {
+    width: 100%;
+    height: 145px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .btn button {
+    margin: 5px 20px;
+    border: none;
+    outline: none;
+    color: hsl(235, 45%, 61%);
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .track-card .track div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 0;
+  }
+  .track-card {
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .track-card .track {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .one {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .two {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .three {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+  .four {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .five {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .six {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+}
